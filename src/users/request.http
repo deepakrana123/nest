@@ -1,0 +1,23 @@
+
+
+
+
+///
+
+# POST http://localhost:3000/auth/signup
+# content-type:application/json
+
+# {
+#     "email":"asdf@gmail.com",
+#     "password":"asdfghjkkhgfda"
+# }
+
+
+
+POST http://localhost:3000/auth/signup
+content-type:application/json
+
+{
+    "email":"asdf@gmail.com",
+    "password":"asdfghjkkhgfda"
+}
