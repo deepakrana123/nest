@@ -1,5 +1,5 @@
 import {AfterInsert , AfterRemove,AfterUpdate,Entity,Column,PrimaryGeneratedColumn} from 'typeorm';
-
+// import {Exclude} from 'class-transformer';
 
 @Entity()
 export class User {
@@ -10,8 +10,9 @@ export class User {
     email:string;
 
     @Column()
+    // @Exclude() nopt required in interceptor property
     password:string;
-
+// this are the hooks
     @AfterInsert()
     logInsert(){
         console.log('intserted user wih id' , this.id);
@@ -19,12 +20,12 @@ export class User {
 
     @AfterUpdate()
     logUpdate(){
-         console.log('intserted user wih id' , this.id);
+         console.log('intserted user update wih id' , this.id);
     }
 
     @AfterRemove()
     remove(){
-        console.log('intserted user wih id' , this.id);
+        console.log('intserted user remove wih id' , this.id);
     }
 
 }

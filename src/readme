@@ -1,0 +1,3 @@
+migaration  type of code to change the table structure
+for doing serailaition we can do it by making dto or by doing interceptor
+to update test case just upgrade the package.json file script to "test:watch:"jest-watch -maxworkers=1"

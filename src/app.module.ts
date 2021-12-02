@@ -6,7 +6,9 @@ import { ReportsModule } from './reports/reports.module';
 import {TypeOrmModule} from '@nestjs/typeorm';
 import {User} from "./users/user.entity";
 import {Reports} from "./reports/reports.entity";
+// import {ValidationPipe} from '@nestjs/common';
 
+// synchronize stands for to change the structure of the table
 @Module({
   imports: [TypeOrmModule.forRoot({
     type:'sqlite',
@@ -20,3 +22,4 @@ import {Reports} from "./reports/reports.entity";
   providers: [AppService],
 })
 export class AppModule {}
+  
